@@ -67,7 +67,7 @@ int main()
 					cin>>item;
 					q.inQueue(item);
                		break;
-        		case 2: 
+        		case 2:
 				item = q.deQueue();
 				if(item != -1000)
 					cout<<"Deleted element is "<<item<<endl;
@@ -106,6 +106,5 @@ int main()
                         default: choice = 0;
                 }
         }
-
     	return 0;
 }
