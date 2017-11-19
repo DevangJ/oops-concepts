@@ -93,7 +93,7 @@ int main()
 					break;
 				}
 				for(i = 0; i < n; i ++)
-				{	
+				{
 					cout<<endl;
 					s[i].outdata();
 				}

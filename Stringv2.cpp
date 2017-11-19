@@ -33,6 +33,7 @@ public:
 ostream & operator << (ostream &out, String &s1)
 {
 	out<<s1.a;
+	return out;
 }
 
 int main()

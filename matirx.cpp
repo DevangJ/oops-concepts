@@ -16,8 +16,8 @@ class matrix
 bool matrix :: operator == (matrix s1)
 {
 	if(r == s1.r && c == s1.c)
-		return true;
-	return false;
+		return 1;
+	return 0;
 }
 
 matrix matrix :: operator +(matrix s1)

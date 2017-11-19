@@ -46,11 +46,12 @@ void indata(int *a, int *b)
 		cout<<"Error: Wrong type entered\n";
 		exit(0);
 	}
-}
+
+	}
 
 int main()
 {
 	int a, b;
 	indata(&a, &b);
 	return 0;
-}
+}[; ]

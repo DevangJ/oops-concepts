@@ -48,13 +48,13 @@ int main()
 	cout<<"Sorted array is\n";
 	for(int i = 0; i < 10; i ++)
 		cout<<arr[i]<<" ";
-	float arr[10];
+/*	float arr[10];
     cout<<"Input floating number array of 10 elements\n";
     for(int i = 0; i < 10; i ++)
         cin>>arr[i];
     quicksort(arr, 0, 9);
     cout<<"Sorted array is\n";
     for(int i = 0; i < 10; i ++)
-        cout<<arr[i]<<" ";
+        cout<<arr[i]<<" ";*/
 	return 0;
 }

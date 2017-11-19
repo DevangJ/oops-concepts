@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 struct node
@@ -36,7 +37,15 @@ void list::ins_spec(int item, int pos)
 	if(ret_first())
 	{
 		node *cur = first;
-		while(cur->rlink != NULL && pos)
+		if(pos == 1)
+        {
+            temp->llink = NULL;
+            temp->rlink = cur;
+            cur->llink = temp;
+            first = temp;
+            return;
+        }
+		while(cur->rlink != NULL && pos-2)
 		{
 			cur = cur->rlink;
 			pos--;
@@ -44,6 +53,8 @@ void list::ins_spec(int item, int pos)
 		temp->rlink = cur->rlink;
 		cur->rlink = temp;
 		temp->llink = cur;
+		if(temp->rlink != NULL)
+            temp->rlink->llink=temp;
 	}
 	else
 	{
@@ -63,13 +74,13 @@ int list::del_spec(int pos)
 		delete first;
 		return item;
 	}
-		
+
 	else
 	{
 		node *cur = first, *prev = first, *next = first;
 		while(next != NULL && pos)
 		{
-			
+
 			prev = cur;
 			cur = next;
 			next = next->rlink;
@@ -80,7 +91,7 @@ int list::del_spec(int pos)
 			next->llink = cur->llink;
 		first = next;
 		int item = cur->item;
-		delete cur;	
+		delete cur;
 		return item;
 	}
 }
